@@ -1,0 +1,23 @@
+<% @team.footballers.each do |footballer| %>
+  <p>
+    <strong>Name:</strong>
+    <%= footballer.name %>
+  </p>
+ 
+  <p>
+    <strong>Surname:</strong>
+    <%= footballer.surname %>
+  </p>
+
+  <p>
+    <strong>Age:</strong>
+    <%= footballer.age %>
+  </p>
+
+
+<p>
+  <%= link_to 'Destroy Footballer', [footballer.team, footballer],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
+<% end %>

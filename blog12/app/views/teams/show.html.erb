@@ -1,0 +1,19 @@
+<p>
+  <strong>Name:</strong>
+  <%= @team.name %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @team.description %>
+</p>
+
+<h2>Footballers</h2>
+<%= render @team.footballers %>
+
+<h3>Add a footballer</h3>
+<%= render 'footballers/form' %>
+
+
+<%= link_to 'Back', teams_index_path %>|
+<%= link_to 'Edit', edit_team_path(@team) %>
